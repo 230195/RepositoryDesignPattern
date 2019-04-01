@@ -1,0 +1,3 @@
+{
+  "DataConnectionString": "Server=.\\SQLExpress;Database=TestDb;Trusted_Connection=True;"
+}
