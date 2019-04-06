@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Data.IocDataModule;
+using Businesslogic.IocBusinessModule;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -31,7 +31,7 @@ namespace RepositoryPattern
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             var containerBuilder = new ContainerBuilder();
-            containerBuilder.RegisterModule(new DataModule());
+            containerBuilder.RegisterModule(new BusinessModule());
             containerBuilder.Populate(services);
 
             this.ApplicationContainer = containerBuilder.Build();
