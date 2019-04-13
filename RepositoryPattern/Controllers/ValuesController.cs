@@ -20,12 +20,12 @@ namespace RepositoryPattern.Controllers
         }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<Data.EntityFramework.Employees>> Get()
+        public ActionResult<IEnumerable<Data.EntityFramework.UserLogin>> Get()
         {
-            IEnumerable<Data.EntityFramework.Employees> data;
+            IEnumerable<Data.EntityFramework.UserLogin> data;
             using (var uow = _unitOfWork)
             {
-                data = uow.Repository<Employees>().GetAll();
+                data = uow.Repository<UserLogin>().GetAll();
             }
                 return data.ToList();
         }

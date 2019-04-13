@@ -12,14 +12,14 @@ namespace Data.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        public readonly TestDbContext _context;
+        public readonly TestDataBaseContext _context;
         public DbSet<TEntity> testDBEntity; 
 
         /// <summary>
         /// Constructor for IRepository Pattern implementation
         /// </summary>
         /// <param name="context">instance of DbContext</param>
-        public Repository(TestDbContext context)
+        public Repository(TestDataBaseContext context)
         {
             _context = context;
             testDBEntity = _context.Set<TEntity>();

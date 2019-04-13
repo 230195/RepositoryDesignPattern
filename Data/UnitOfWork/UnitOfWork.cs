@@ -15,7 +15,7 @@ namespace Data.UnitOfWork
         /// <summary>
         /// Private Readonly fields to inject context for UoW
         /// </summary>
-        readonly TestDbContext _context;
+        readonly TestDataBaseContext _context;
 
         bool _disposed = false;
 
@@ -26,7 +26,7 @@ namespace Data.UnitOfWork
         /// <summary>
         /// public Constructor for UoW class
         /// </summary>
-        public UnitOfWork(TestDbContext dbContext)
+        public UnitOfWork(TestDataBaseContext dbContext)
         {
             _context = dbContext;
         }

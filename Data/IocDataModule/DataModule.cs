@@ -12,7 +12,7 @@ namespace Data.IocDataModule
             var assm = Assembly.GetExecutingAssembly();
 
             //For DB Context
-            builder.RegisterType<TestDbContext>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<TestDataBaseContext>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<UnitOfWork.UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
 
             base.Load(builder);
